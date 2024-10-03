@@ -1,0 +1,10 @@
+<%= form_with(model: movie_genre, local: true, html: { class: "form-class" }) do |form| %>
+  <div class="field">
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-txt' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
