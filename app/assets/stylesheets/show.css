@@ -1,0 +1,33 @@
+.card-movie-detail {
+    width: 99vw;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-movie-single {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: max-content;
+    padding: 20px;
+    box-shadow: 4px 8px 12px rgb(45, 38, 146);
+}
+
+.card-body-details h2 {
+    border-bottom: 1px solid gray;
+    text-align: center;
+    font-size: 25px;
+}
+
+.link-detail-edit {
+    display: flex;
+    justify-content: center;
+}
+
+card-body-details p {
+    font-size: 30px;
+}
