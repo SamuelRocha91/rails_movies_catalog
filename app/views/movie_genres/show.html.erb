@@ -1,7 +1,7 @@
 <div>
-    <div>
+    <div class="head-genre">
         <h2><%= @movie_genre.name %></h2>
-        <% link_to "Edit this genre name", edit_movie_genre_path(@movie_genre.id)%>
+        <%= link_to "Edit this genre name", edit_movie_genre_path(@movie_genre.id)%>
     </div>
 
     <div class="cards-movies">
