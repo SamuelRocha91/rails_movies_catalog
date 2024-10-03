@@ -1,9 +1,10 @@
 .card-movie-detail {
+    margin-top: 10px;
     width: 99vw;
     height: 88vh;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
 }
 
@@ -13,7 +14,6 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 600px;
     height: max-content;
     padding: 20px;
@@ -21,6 +21,8 @@
 }
 
 .card-body-details {
+    display: flex;
+    flex-direction: column;
     height: 60%;
 }
 
@@ -41,5 +43,5 @@ card-body-details p {
 
 .movie-banner-detail {
     width: 100%;
-    height: 400px;
+    height: 300px;
 }
