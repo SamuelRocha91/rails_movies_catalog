@@ -15,6 +15,8 @@ class MoviesController < ApplicationController
   end
 
   def new
-    movie = Movie.new
+    @movie = Movie.new
+    @movie_genres = MovieGenre.all 
+    @directors = Director.all 
   end
 end
