@@ -59,3 +59,46 @@ body {
  main {
     margin-top: 10vh;
  }
+
+ .filter-content {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 18px;
+    padding: 20px;
+ }
+
+ .filter-movie {
+    width: 200px;
+    font-size: 15px;
+    padding: 9px;
+ }
+
+ select {
+    font-size: 15px;
+    padding: 9px;
+ }
+
+.search-btn {
+    background-color: green;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 20px;
+    color: white;
+ }
+
+ .search-btn:hover {
+    filter: brightness(1.6);
+ }
+
+ .search-name {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+ }
+
+ .category-text {
+    font-size: 25px;
+    font-weight: 600;
+ }

@@ -1,1 +1,13 @@
-<h1>Hello World</h1>
+ <%= form_with url: movies_path, method: :get, local: true do |form| %>
+    <div class="filter-content">
+        <div>
+          <%= form.label :name, "Category:", class: "category-text" %>
+          <%= form.select :name,  @movie_genres.map { |genre| genre.name }, prompt: "All" %>
+          <%= form.submit "Filtrar", class: 'search-btn' %>
+        </div>
+        <div class="search-name">
+            <input class="filter-movie" type="text" placeholder="Enter the name of the movie"/>
+            <button class="search-btn">Search</button>
+        </div>
+    </div>
+<% end %>
