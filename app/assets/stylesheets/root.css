@@ -62,14 +62,15 @@
     box-shadow: 2px 4px 6px green;
  }
 
-  .card-movie img {
+.card-movie img {
     height: 60%;
-  }
+}
 
-  .card-movie:hover {
-     transform: translateY(-10px);
+.card-movie:hover {
+    transform: translateY(-10px);
     box-shadow: 4px 8px 10px green;
 }
+
 .card-body {
     box-sizing: border-box;
     display: flex;
@@ -83,14 +84,36 @@
 
 .paginate-btns {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
     margin-right: 30px;
+    margin-left: 30px;
     gap: 5px;
     margin-top: 20px;
 }
 
 .paginate-btns span, .paginate-btns a {
-    font-size: medium;
     margin-right: 5px;
     color: rgb(2, 41, 13);
+}
+
+.create-movie {
+    padding: 15px;
+    background-color: rgb(253, 253, 255);
+    border-radius: 10px;
+    font-weight: 600;
+    border: 3px solid rgb(15, 51, 1);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.create-movie:hover {
+    filter: brightness(1.6);
+}
+
+.link-create-container {
+    width: 55%;
+    display: flex;
+    justify-content: end;
+    height: max-content;
 }

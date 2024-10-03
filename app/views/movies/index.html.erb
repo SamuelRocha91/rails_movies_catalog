@@ -2,27 +2,40 @@
     <div class="filter-content">
         <div>
           <%= form.label :category, "Category:", class: "category-text" %>
-          <%= form.select :category_id,  @movie_genres.map { |genre| [genre.name, genre.id] }, prompt:  @selected_genre || "All" %>
+          <%= form.select :category_id,  
+            @movie_genres.map { |genre| [genre.name, genre.id] },
+            prompt:  @selected_genre || "All"
+            %>
         </div>
         <div class="search-name">
-         <%= form.text_field :movie_name, class: "filter-movie", placeholder: "Enter the name of the movie" %>
+         <%= form.text_field :movie_name, class: "filter-movie", 
+             placeholder: "Enter the name of the movie" 
+             %>
          <%= form.submit "Search", class: "search-btn" %>
         </div>
     </div>
 <% end %>
 <div class="paginate-btns">
-  <%= paginate @movies %>
+  <div class="link-create-container">
+    <%= link_to "Create new movie", movies_path,  class: "create-movie" %>
+ </div>
+  <div>
+    <%= paginate @movies %>
+  </div>
 </div>
 <div class="cards-movies">
     <% @movies.each do |movie| %>
         <div class="card-movie">
             <% if movie.banner.attached? %>
-              <%= image_tag movie.image.variant(resize_to_limit: [100, 100]), alt: movie.name, class: "movie-banner" %>
+              <%= image_tag movie.image.variant(resize_to_limit: [100, 100]),
+                  alt: movie.name, 
+                  class: "movie-banner" 
+                  %>
             <% end %>
             <div class="card-body">
                 <h2><%= movie.title %></h2>
                 <p>Release year: <%= movie.year_of_release %></p>
-                <%= link_to "Ver detalhes", movie_path(movie.id)%>
+                <%= link_to "See Details", movie_path(movie.id)%>
             </div>
         </div>
     <% end %>
