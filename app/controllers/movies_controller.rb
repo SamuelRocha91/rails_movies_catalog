@@ -13,4 +13,8 @@ class MoviesController < ApplicationController
       )  if params[:movie_name].present?
     @movies = @movies.page(page).per(10)  
   end
+
+  def new
+    movie = Movie.new
+  end
 end
