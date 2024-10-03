@@ -55,6 +55,17 @@ class MoviesController < ApplicationController
     end
   end
 
+  def destroy
+      @movie = Movie.find(params[:id])
+    if @movie.destroy
+      flash[:notice] = "Movie successfully deleted"
+      redirect_to root_path
+    else
+      flash.now[:alert] = "There was an error creating the movie."
+      render :show
+    end
+  end
+
   private
 
   def movie_params
