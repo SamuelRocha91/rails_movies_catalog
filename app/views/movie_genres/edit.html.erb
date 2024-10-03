@@ -1,8 +1,11 @@
 <div class="form-new">
-     <% if flash[:alert] %>
-      <div class="alert-flash">
-        <%= flash[:alert] %>
-    </div>
-    <h2>Edit genre movie</h2>
+     <div class="edit-genre">
+         <% if flash[:alert] %>
+          <div class="alert-flash">
+            <%= flash[:alert] %>
+             <% end %>
+          </div>
+             <h2>Edit genre movie</h2>
+     </div>
     <%= render 'form', movie_genre: @movie_genre %>
 </div>

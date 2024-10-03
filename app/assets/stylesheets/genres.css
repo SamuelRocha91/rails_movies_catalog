@@ -48,3 +48,9 @@
     border-bottom: 1px solid gray;
     box-shadow: 4px 6px 8px gray;
 }
+
+.edit-genre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

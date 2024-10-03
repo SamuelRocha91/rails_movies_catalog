@@ -15,7 +15,7 @@ class MovieGenresController < ApplicationController
     @movie_genre = MovieGenre.find(params[:id])
     if @movie_genre.update(movie_genre_params)
       flash[:notice] = "Movie successfully updated!"
-      redirect_to movie_genre_path(@movie.id)
+      redirect_to movie_genre_path(@movie_genre.id)
     else
       flash.now[:alert] = "There was an error creating the movie"
       render :edit
