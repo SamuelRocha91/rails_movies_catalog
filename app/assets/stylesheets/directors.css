@@ -1,0 +1,26 @@
+.container-directors {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.card-directors-single {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid gray;
+    box-shadow: 2px 4px 8px gray;
+}
+
+.card-directors-single h2 {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.card-directors-single a {
+    text-align: center;
+}

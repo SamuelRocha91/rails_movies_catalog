@@ -10,7 +10,7 @@
 
     <div class="container-directors">
         <% @directors.each do |director| %>
-            <div class="card-body">
+            <div class="card-directors-single">
                 <h2><%= director.name %></h2>
                 <p>Nationality: <%= director.nationality %></p>
                 <%= link_to "See Details", director_path(director.id)%>
