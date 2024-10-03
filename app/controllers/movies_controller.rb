@@ -19,4 +19,20 @@ class MoviesController < ApplicationController
     @movie_genres = MovieGenre.all 
     @directors = Director.all 
   end
+
+  def create
+    @movie = Movie.new(movie_params)
+    if @movie.save
+      redirect_to root_path
+    else
+      @movie_genres = MovieGenre.all
+      render :new
+    end
+  end
+
+  private
+
+  def movie_params
+    params.require(:movie).permit(:title, :banner, :year_of_release, :duration, :movie_genre_id, :director_id, :country_of_origin, :synopsis, :is_draft)
+  end
 end

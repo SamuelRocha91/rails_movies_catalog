@@ -27,8 +27,8 @@
     <% @movies.each do |movie| %>
         <div class="card-movie">
             <% if movie.banner.attached? %>
-              <%= image_tag movie.image.variant(resize_to_limit: [100, 100]),
-                  alt: movie.name, 
+              <%= image_tag movie.banner.variant(resize_to_limit: [500, 500]),
+                  alt: movie.title, 
                   class: "movie-banner" 
                   %>
             <% end %>

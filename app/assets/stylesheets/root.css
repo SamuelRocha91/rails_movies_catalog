@@ -64,6 +64,7 @@
 
 .card-movie img {
     height: 60%;
+    width: 100%;
 }
 
 .card-movie:hover {

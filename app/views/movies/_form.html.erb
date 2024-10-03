@@ -22,8 +22,8 @@
 
 
     <div class="field">
-      <%= form.label :category_id, "Category:", style: "display: block", class: 'form-label'  %>
-      <%= form.select :category_id,  
+      <%= form.label :movie_genre_id, "Category:", style: "display: block", class: 'form-label'  %>
+      <%= form.select :movie_genre_id,  
               @movie_genres.map { |genre| [genre.name, genre.id] }
               %>
     </div>
