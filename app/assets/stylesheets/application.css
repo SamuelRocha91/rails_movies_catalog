@@ -61,3 +61,11 @@ body {
     display: flex;
     flex-direction: column;
  }
+
+ .notice-flash {
+   color: green;
+ }
+
+ .alert-flash {
+   color: red;
+ }
