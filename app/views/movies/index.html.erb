@@ -16,11 +16,6 @@
     </div>
 <% end %>
 <div class="paginate-btns">
-    <% if flash[:notice] %>
-      <div class="notice-flash">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
   <div class="link-create-container">
     <%= link_to "Create new movie", new_movie_path,  class: "create-movie" %>
  </div>

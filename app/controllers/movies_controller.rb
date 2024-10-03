@@ -24,7 +24,7 @@ class MoviesController < ApplicationController
     @movie = Movie.new(movie_params)
     if @movie.save
       flash[:notice] = "Movie successfully created!"
-      redirect_to root_path
+      redirect_to movie_path(@movie.id)
     else
       flash.now[:alert] = "There was an error creating the movie."
       @movie_genres = MovieGenre.all
@@ -41,6 +41,20 @@ class MoviesController < ApplicationController
     @movie_genres = MovieGenre.all 
     @directors = Director.all     
   end
+
+  def update
+    @movie = Movie.find(params[:id])
+    if @movie.update(movie_params)
+      flash[:notice] = "Movie successfully updated!"
+      redirect_to movie_path(@movie.id)
+    else
+      flash.now[:alert] = "There was an error creating the movie."
+      @movie_genres = MovieGenre.all
+      @directors = Director.all     
+      render :edit
+    end
+  end
+
   private
 
   def movie_params
