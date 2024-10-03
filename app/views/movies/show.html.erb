@@ -1,9 +1,9 @@
 <div class="card-movie-detail">
-    <% if flash[:notice] %>
-      <div class="notice-flash">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
+        <% if flash[:notice] %>
+          <div class="notice-flash">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
     <div class="card-movie-single">
             <% if @movie.banner.attached? %>
               <%= image_tag @movie.banner.variant(resize_to_limit: [400, 400]),
@@ -43,7 +43,7 @@
                     </strong> <%= @movie.director.name %></p>
                 <div class="link-detail-edit">
                     <%= link_to "Edit movie", edit_movie_path(@movie.id) %>
-                    <%= link_to 'Delete movie', movie_path(@movie.id), method: :delete, data: { confirm: 'Are you sure you want to delete this movie?' } %>
+                    <%= button_to 'Delete movie', movie_path(@movie.id), method: :delete, data: { turbo_confirm: 'Are you sure you want to delete this movie?' } %>
                 </div>
             </div>
         </div>

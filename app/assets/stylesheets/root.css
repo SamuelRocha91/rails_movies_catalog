@@ -85,7 +85,8 @@
 
 .paginate-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
     align-items: center;
     margin-right: 30px;
     margin-left: 30px;
@@ -113,8 +114,19 @@
 }
 
 .link-create-container {
-    width: 55%;
     display: flex;
+    text-align: end;
+    justify-content: center;
     justify-content: end;
     height: max-content;
+}
+
+.flash-data {
+    width: 33%;
+    height: 100%;
+    visibility: visible
+}
+
+.paginate {
+    width: 33%;
 }
