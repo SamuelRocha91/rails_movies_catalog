@@ -6,4 +6,9 @@ class MovieGenresController < ApplicationController
   def show
     @movie_genre = MovieGenre.includes(movies: :banner_attachment).find(params[:id])
   end
+
+  def edit
+    @movie_genre = MovieGenre.find(params[:id])
+  end
+  
 end
