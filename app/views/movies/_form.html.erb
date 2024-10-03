@@ -1,7 +1,7 @@
 <%= form_with(model: movie, local: true, html: { class: "form-class" }) do |form| %>
   <div class="field">
     <%= form.label :title, class: 'form-label' %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'form-txt' %>
   </div>
 
   <div class="field">
