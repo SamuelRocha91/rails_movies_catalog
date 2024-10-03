@@ -33,6 +33,10 @@ class MovieGenresController < ApplicationController
     end
   end
 
+  def def new
+    @movie_genre = MovieGenre.new
+  end
+  
   private
 
   def movie_genre_params
