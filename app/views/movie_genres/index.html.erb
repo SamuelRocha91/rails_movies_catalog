@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <button>Create new movie genre</button>
+    </div>
+    <div>
+        <% if @movie_genres %>
+          <% movie_genres.map do |genre| %>
+            <div>
+                <h2><%= genre.name %></h2>
+                <%= link_to "See more", movie_genre_path(genre.id) %>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+</div>
