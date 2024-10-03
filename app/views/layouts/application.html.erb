@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMoviesCatalog</title>
+    <title>Cine Memory</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= favicon_link_tag 'movie-clapper-open.png' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="image-logo">
+        <%= image_tag "movie-clapper-open.png", class: 'my-logo' %>
+      </div>
+      <div class="header-links">
+        <%= link_to "Movies", root_path %>
+        <%= link_to "Genres", movie_genres_path %>
+        <%= link_to "Directors", directors_path %>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

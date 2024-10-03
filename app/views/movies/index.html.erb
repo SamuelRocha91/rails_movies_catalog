@@ -1,0 +1,50 @@
+ <%= form_with url: movies_path, method: :get, local: true do |form| %>
+    <div class="filter-content">
+        <div>
+          <%= form.label :category, "Category:", class: "category-text" %>
+          <%= form.select :category_id,  
+            @movie_genres.map { |genre| [genre.name, genre.id] },
+            prompt:  @selected_genre || "All"
+            %>
+        </div>
+        <div class="search-name">
+         <%= form.text_field :movie_name, class: "filter-movie", 
+             placeholder: "Enter the name of the movie" 
+             %>
+         <%= form.submit "Search", class: "search-btn" %>
+        </div>
+    </div>
+<% end %>
+<div class="paginate-btns">
+  <div class="flash-data" %>">
+    <% if flash[:notice] %>
+        <div class="notice-flash">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+  </div>
+
+  <div class="link-create-container">
+    <%= link_to "Create new movie", new_movie_path,  class: "create-movie" %>
+ </div>
+  <div class="paginate">
+    <%= paginate @movies %>
+  </div>
+</div>
+<div class="cards-movies">
+    <% @movies.each do |movie| %>
+        <div class="card-movie">
+            <% if movie.banner.attached? %>
+              <%= image_tag movie.banner.variant(resize_to_limit: [500, 500]),
+                  alt: movie.title, 
+                  class: "movie-banner" 
+                  %>
+            <% end %>
+            <div class="card-body">
+                <h2><%= movie.title %></h2>
+                <p>Release year: <%= movie.year_of_release %></p>
+                <%= link_to "See Details", movie_path(movie.id)%>
+            </div>
+        </div>
+    <% end %>
+</div>

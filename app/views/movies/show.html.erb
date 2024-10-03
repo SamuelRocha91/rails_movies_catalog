@@ -1,0 +1,51 @@
+<div class="card-movie-detail">
+        <% if flash[:notice] %>
+          <div class="notice-flash">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+    <div class="card-movie-single">
+            <% if @movie.banner.attached? %>
+              <%= image_tag @movie.banner.variant(resize_to_limit: [400, 400]),
+                  alt: @movie.title, 
+                  class: "movie-banner-detail" 
+                  %>
+            <% end %>
+            <div class="card-body-details">
+                <h2><%= @movie.title %></h2>
+                <p>
+                    <strong>
+                        Release year:
+                    </strong><%= @movie.year_of_release %></p>
+                <p>
+                    <strong>
+                        Duration:
+                    </strong> <%= @movie.duration %> min</p>
+                <p>
+                    <strong>
+                        Synopsis:
+                     </strong> <%= @movie.synopsis %></p>
+                <p>
+                    <strong>
+                        Origin:
+                     </strong> <%= @movie.country_of_origin %></p>
+                <p>
+                    <strong>
+                    Is draft?:
+                    </strong> <%= @movie.is_draft %></p>
+                <p>
+                    <strong>
+                    Genre:
+                    </strong> <%=  @movie.movie_genre.name %></p>
+                <p>
+                    <strong>
+                    Director:
+                    </strong> <%= @movie.director.name %></p>
+                <div class="link-detail-edit">
+                    <%= link_to "Edit movie", edit_movie_path(@movie.id) %>
+                    <%= button_to 'Delete movie', movie_path(@movie.id), method: :delete, data: { turbo_confirm: 'Are you sure you want to delete this movie?' } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

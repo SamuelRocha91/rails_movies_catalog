@@ -1,0 +1,58 @@
+<%= form_with(model: movie, local: true, html: { class: "form-class" }) do |form| %>
+  <div class="field">
+    <%= form.label :title, class: 'form-label' %>
+    <%= form.text_field :title, class: 'form-txt' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :banner, style: "display: block", class: 'form-label' %>
+    <%= form.file_field :banner %>
+  </div>
+
+  <div class="field-number">
+    <div class="field">
+      <%= form.label :year_of_release, style: "display: block", class: 'form-label'  %>
+      <%= form.number_field :year_of_release %>
+    </div>
+
+    <div class="field">
+      <%= form.label :duration, style: "display: block", class: 'form-label'  %>
+      <%= form.number_field :duration %>
+    </div>
+
+
+    <div class="field">
+      <%= form.label :movie_genre_id, "Category:", style: "display: block", class: 'form-label'  %>
+      <%= form.select :movie_genre_id,  
+              @movie_genres.map { |genre| [genre.name, genre.id] }
+              %>
+    </div>
+
+
+    <div class="field">
+      <%= form.label :director_id, "Director:", style: "display: block", class: 'form-label'  %>
+      <%= form.select :director_id,  
+              @directors.map { |genre| [genre.name, genre.id] }
+              %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :country_of_origin, style: "display: block", class: 'form-label'  %>
+    <%= form.text_field :country_of_origin , class: 'form-txt'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :synopsis, style: "display: block", class: 'form-label'  %>
+    <%= form.text_area :synopsis %>
+  </div>
+
+ <div class="field">
+    <%= form.check_box :is_draft %>
+    <%= form.label :is_draft  %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
