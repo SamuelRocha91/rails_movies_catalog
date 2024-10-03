@@ -1,6 +1,6 @@
 <div class="main-genre">
     <div class="link-create-genre">
-            <button class="create-movie">Register a new director</button>
+            <%= link_to "Register a new director", new_director_path, class:"create-movie" %>
             <% if flash[:notice] %>
             <div class="notice-flash">
                 <%= flash[:notice] %>
