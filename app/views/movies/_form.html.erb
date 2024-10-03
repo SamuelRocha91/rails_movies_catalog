@@ -1,4 +1,4 @@
-<%= form_with(model: movie, local: true) do |form| %>
+<%= form_with(model: movie, local: true, html: { class: "form-class" }) do |form| %>
   <div class="field">
     <%= form.label :title, class: 'form-label' %>
     <%= form.text_field :title %>
@@ -39,7 +39,7 @@
 
   <div class="field">
     <%= form.label :country_of_origin, style: "display: block", class: 'form-label'  %>
-    <%= form.text_field :country_of_origin %>
+    <%= form.text_field :country_of_origin , class: 'form-txt'%>
   </div>
 
   <div class="field">

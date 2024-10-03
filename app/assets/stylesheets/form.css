@@ -8,7 +8,7 @@
   font-size: 30px;
 }
 
-form {
+.form-class {
   width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -35,7 +35,7 @@ form {
   color: #333;
 }
 
-input[type="text"],
+.form-txt,
 input[type="number"],
 textarea {
   width: 100%;
