@@ -1,8 +1,8 @@
 class MoviesController < ApplicationController
   def index
     page = params[:page] || 1
-    @movie_genres = MovieGenre.all 
-    @movies = Movie.all
+    @movie_genres = MovieGenre.all
+    @movies = Movie.all.includes(banner_attachment: :blob) 
     @movies = @movies
       .where(
         movie_genre_id: params[:category_id]
@@ -61,7 +61,7 @@ class MoviesController < ApplicationController
       flash[:notice] = "Movie successfully deleted"
       redirect_to root_path
     else
-      flash.now[:alert] = "There was an error creating the movie."
+      flash.now[:alert] = "There was an error to delete this movie."
       render :show
     end
   end

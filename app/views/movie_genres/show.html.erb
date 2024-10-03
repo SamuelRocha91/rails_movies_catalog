@@ -1,0 +1,35 @@
+<div>
+    <div class="head-genre">
+        <% if flash[:notice] %>
+          <div class="notice-flash">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+        <% if flash[:alert] %>
+          <div class="alert-flash">
+            <%= flash[:alert] %>
+        <% end %>
+        <h2><%= @movie_genre.name %></h2>
+        <div>
+            <%= link_to "Edit this genre name", edit_movie_genre_path(@movie_genre.id)%>
+        </div>
+    </div>
+
+    <div class="cards-movies">
+    <% @movie_genre.movies.each do |movie| %>
+        <div class="card-movie">
+            <% if movie.banner.attached? %>
+              <%= image_tag movie.banner.variant(resize_to_limit: [500, 500]),
+                  alt: movie.title, 
+                  class: "movie-banner" 
+                  %>
+            <% end %>
+            <div class="card-body">
+                <h2><%= movie.title %></h2>
+                <p>Release year: <%= movie.year_of_release %></p>
+                <%= link_to "See Details", movie_path(movie.id)%>
+            </div>
+        </div>
+    <% end %>
+    </div>
+</div>
