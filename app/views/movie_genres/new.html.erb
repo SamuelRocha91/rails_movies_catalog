@@ -1,0 +1,9 @@
+<div class="form-new">
+    <h2>New Movie Genre registration</h2>
+    <% if flash[:alert] %>
+      <div class="alert-flash">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+    <%= render 'form', movie_genre: @movie_genre %>
+</div>
