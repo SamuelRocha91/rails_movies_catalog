@@ -11,6 +11,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="image-logo">
+        <%= image_tag "movie-clapper-open.png", class: 'my-logo' %>
+      </div>
+      <div class="header-links">
+        <%= link_to "Movies", root_path %>
+        <%= link_to "Genres", movie_genres_path %>
+        <%= link_to "Directors", directors_path %>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
