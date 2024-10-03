@@ -1,5 +1,10 @@
 <div>
     <div class="head-genre">
+        <% if flash[:notice] %>
+          <div class="notice-flash">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
         <h2><%= @movie_genre.name %></h2>
         <%= link_to "Edit this genre name", edit_movie_genre_path(@movie_genre.id)%>
     </div>
