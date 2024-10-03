@@ -33,8 +33,19 @@ class MovieGenresController < ApplicationController
     end
   end
 
-  def def new
+  def new
     @movie_genre = MovieGenre.new
+  end
+
+  def create
+    @movie_genre = MovieGenre.new(movie_genre_params)
+    if @movie_genre_params.save
+      flash[:notice] = "Movie successfully created!"
+      redirect_to movie_genre_path(@movie_genre.id)
+    else
+      flash.now[:alert] = "There was an error creating the movie."
+      render :new
+    end
   end
   
   private
