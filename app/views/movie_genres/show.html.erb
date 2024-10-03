@@ -5,6 +5,10 @@
             <%= flash[:notice] %>
           </div>
         <% end %>
+        <% if flash[:alert] %>
+          <div class="alert-flash">
+            <%= flash[:alert] %>
+        <% end %>
         <h2><%= @movie_genre.name %></h2>
         <div>
             <%= link_to "Edit this genre name", edit_movie_genre_path(@movie_genre.id)%>

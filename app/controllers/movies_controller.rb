@@ -61,7 +61,7 @@ class MoviesController < ApplicationController
       flash[:notice] = "Movie successfully deleted"
       redirect_to root_path
     else
-      flash.now[:alert] = "There was an error creating the movie."
+      flash.now[:alert] = "There was an error to delete this movie."
       render :show
     end
   end

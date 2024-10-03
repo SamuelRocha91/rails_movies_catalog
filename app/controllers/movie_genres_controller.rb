@@ -22,6 +22,17 @@ class MovieGenresController < ApplicationController
     end
   end
 
+  def destroy
+    @movie_genre = MovieGenre.find(params[:id])
+    if @movie_genre.destroy
+      flash[:notice] = "Movie genre successfully deleted"
+      redirect_to movie_genres_path
+    else
+      flash.now[:alert] = "There was an error to delete this genre movie"
+      render :show
+    end
+  end
+
   private
 
   def movie_genre_params

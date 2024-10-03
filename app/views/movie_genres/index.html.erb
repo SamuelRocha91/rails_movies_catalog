@@ -1,6 +1,11 @@
 <div class="main-genre">
     <div class="link-create-genre">
         <button class="create-movie">Create new movie genre</button>
+        <% if flash[:notice] %>
+          <div class="notice-flash">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
     </div>
     <div class="container-circles">
         <% if @movie_genres %>
