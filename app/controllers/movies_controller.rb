@@ -37,7 +37,9 @@ class MoviesController < ApplicationController
   end
 
   def edit
-    @movie = Movie.find(params[:id])    
+    @movie = Movie.find(params[:id])
+    @movie_genres = MovieGenre.all 
+    @directors = Director.all     
   end
   private
 
