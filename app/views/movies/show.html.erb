@@ -43,6 +43,7 @@
                     </strong> <%= @movie.director.name %></p>
                 <div class="link-detail-edit">
                     <%= link_to "Edit movie", edit_movie_path(@movie.id) %>
+                    <%= link_to 'Delete movie', movie_path(@movie.id), method: :delete, data: { confirm: 'Are you sure you want to delete this movie?' } %>
                 </div>
             </div>
         </div>
