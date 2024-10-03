@@ -1,0 +1,20 @@
+<div class="main-genre">
+    <div class="link-create-genre">
+            <button class="create-movie">Register a new director</button>
+            <% if flash[:notice] %>
+            <div class="notice-flash">
+                <%= flash[:notice] %>
+            </div>
+            <% end %>
+    </div>
+
+    <div class="container-directors">
+        <% @directors.each do |director| %>
+            <div class="card-body">
+                <h2><%= director.name %></h2>
+                <p>Nationality: <%= director.nationality %></p>
+                <%= link_to "See Details", director_path(director.id)%>
+            </div>
+        <% end %>
+    </div>
+</div>
