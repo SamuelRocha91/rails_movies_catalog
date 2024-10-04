@@ -1,4 +1,4 @@
-# <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWNyzRvZuphTsoQwk0FKqdTWHQEG50IIDgA&s" alt="Rails Projects Logo" width="52" height="40" /> 🎬 Cine Memory - Site de de Gerenciamento de Filmes<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWNyzRvZuphTsoQwk0FKqdTWHQEG50IIDgA&s" alt="Rails Projects Logo" width="52" height="40" /> 
+# <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWNyzRvZuphTsoQwk0FKqdTWHQEG50IIDgA&s" alt="Rails Projects Logo" width="40" height="30" /> 🎬 Cine Memory - Site de de Gerenciamento de Filmes<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWNyzRvZuphTsoQwk0FKqdTWHQEG50IIDgA&s" alt="Rails Projects Logo" width="40" height="30" /> 
 
 
 
@@ -27,10 +27,13 @@ Este projeto é um **Sistema de Gerenciamento de Filmes** desenvolvido com Ruby 
 <details>
 
 <summary> <h2>Gems Utilizadas</h2> </summary>
+
 - Bullet (Detecção de N+1 Queries)
 Durante o desenvolvimento, a gem Bullet é usada para detectar e alertar sobre ineficiências no carregamento de consultas SQL, como o problema de N+1 queries.
+
 - Kaminari (Paginação)
 A gem Kaminari é utilizada para a paginação de registros em listagens, tornando a navegação em grandes conjuntos de dados mais eficiente. 
+
 - Active Storage (Gerenciamento de Arquivos)
 A aplicação também utiliza o Active Storage para fazer upload e gerenciamento de arquivos, como banners de filmes.
 
@@ -119,9 +122,6 @@ Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
 <summary> <h2> Funcionalidades (Planejadas) </h2> </summary>
 
 - **Gerenciamento de filmes**: 
-  - Status de rascunho (Indica se o filme está em rascunho ou publicado);
-  - Filtrar por data, caso esteja lançado ou não;
-  - Gerar validação de campo de data e outros;
   - Tetes unitários
   - Responsividade
 
