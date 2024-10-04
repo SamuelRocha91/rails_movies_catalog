@@ -36,6 +36,7 @@ body {
     align-items: center;
     font-size: x-large;
     gap: 20px;
+    width: 70%;
  }
 
  .header-links a{ 
@@ -68,4 +69,15 @@ body {
 
  .alert-flash {
    color: red;
+ }
+
+ .draft-link {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+ }
+
+ .draft-link a{ 
+    text-decoration: none;
+    color: blue;
  }
