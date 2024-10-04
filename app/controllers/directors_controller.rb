@@ -20,7 +20,7 @@ class DirectorsController < ApplicationController
   end
 
   def show
-    @director = Director.includes(:favorite_genre, :movies).find(params[:id])
+    @director = Director.includes(:favorite_genre, movies: {banner_attachment: :blob}).find(params[:id])
   end
 
   def edit
