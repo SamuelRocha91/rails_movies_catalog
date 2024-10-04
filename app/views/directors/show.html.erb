@@ -1,0 +1,28 @@
+<div class="card-movie-detail">
+        <% if flash[:notice] %>
+          <div class="notice-flash">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+    <div class="card-movie-single">
+            <div class="card-body-details">
+                <h2><%= @director.name %></h2>
+                <p>
+                    <strong>
+                        Nationality:
+                    </strong><%= @director.nationality %></p>
+                <p>
+                    <strong>
+                        Bith_date:
+                    </strong> <%= @director.birth_date %> min</p>
+                <p>
+                    <strong>
+                        Favorite category:
+                     </strong> <%= @director.favorite_genre.name %></p>
+                <div class="link-detail-edit">
+                    <%= link_to "Edit Director", edit_director_path(@director.id) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

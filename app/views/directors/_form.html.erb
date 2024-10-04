@@ -15,7 +15,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :favorite_genre_id, "Category:", style: "display: block", class: 'form-label'  %>
+    <%= form.label :favorite_genre_id, "Favorite category:", style: "display: block", class: 'form-label'  %>
     <%= form.select :favorite_genre_id,  
         @movie_genres.map { |genre| [genre.name, genre.id] }
         %>
