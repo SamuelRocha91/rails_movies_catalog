@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   def index
     page = params[:page] || 1
     @movie_genres = MovieGenre.all
-    @movies = Movie.all.includes(banner_attachment: :blob) 
+    @movies = Movie.where(is_draft: false).includes(banner_attachment: :blob) 
     @movies = @movies
       .where(
         movie_genre_id: params[:category_id]
