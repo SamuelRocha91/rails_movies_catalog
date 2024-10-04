@@ -19,6 +19,10 @@ class DirectorsController < ApplicationController
     end
   end
 
+  def show
+    @director = Director.includes(:favorite_genre).find(params[:id])
+  end
+
   private
 
   def director_params
