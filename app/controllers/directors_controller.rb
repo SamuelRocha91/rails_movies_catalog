@@ -28,6 +28,16 @@ class DirectorsController < ApplicationController
     @movie_genres = MovieGenre.all
   end
 
+  def update
+    @director = Director.find(params[:id])
+    if @director.update(director_params)
+      flash[:notice] = "Director data successfully updated!"
+      redirect_to director_path(@director.id)
+    else
+      flash.now[:alert] = "There was an error updating the movie"
+      render :edit
+    end
+  end
   private
 
   def director_params
