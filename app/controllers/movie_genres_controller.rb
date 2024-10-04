@@ -4,7 +4,7 @@ class MovieGenresController < ApplicationController
   end
 
   def show
-    @movie_genre = MovieGenre.includes(movies: :banner_attachment).find(params[:id])
+    @movie_genre = MovieGenre.includes(movies: {banner_attachment: :blob}).find(params[:id])
   end
 
   def edit
