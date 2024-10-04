@@ -1,9 +1,11 @@
 <div class="card-movie-detail-director">
-        <% if flash[:notice] %>
-          <div class="notice-flash">
-            <%= flash[:notice] %>
-          </div>
-        <% end %>
+        <div>
+            <% if flash[:notice] %>
+              <div class="notice-flash">
+                <%= flash[:notice] %>
+              </div>
+            <% end %>
+        </div>
     <div class="card-movie-single-director">
             <div class="card-body-details-director">
                 <h2><%= @director.name %></h2>

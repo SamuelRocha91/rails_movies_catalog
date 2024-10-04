@@ -26,6 +26,10 @@
 
 .card-movie-detail-director {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
 }
 
 .card-movie-single-director {
