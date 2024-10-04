@@ -11,7 +11,6 @@
 
 require "open-uri"
 
-# Lista de principais gêneros de filmes
 genres = [
   { name: "Action" },
   { name: "Adventure" },
@@ -37,9 +36,7 @@ end
 puts "Gêneros de filmes inseridos com sucesso!"
 
 
-# db/seeds.rb
 
-# Encontrando gêneros de filmes para associar com os diretores
 action_genre = MovieGenre.find_by(name: "Action")
 animation_genre = MovieGenre.find_by(name: "Animation")
 drama_genre = MovieGenre.find_by(name: "Drama")
@@ -50,7 +47,6 @@ fantasy_genre = MovieGenre.find_by(name: "Fantasy")
 documentary_genre = MovieGenre.find_by(name: "Documentary")
 
 
-# Lista de diretores com seus gêneros favoritos
 directors = [
   {
     name: "Steven Spielberg",
@@ -84,7 +80,6 @@ directors = [
   }
 ]
 
-# Criar ou encontrar cada diretor
 directors.each do |director_data|
   Director.find_or_create_by(
     name: director_data[:name],
