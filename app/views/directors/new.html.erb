@@ -1,0 +1,9 @@
+<div class="form-new">
+    <h2>New director registration</h2>
+    <% if flash[:alert] %>
+      <div class="alert-flash">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+    <%= render 'form', director: @director %>
+</div>

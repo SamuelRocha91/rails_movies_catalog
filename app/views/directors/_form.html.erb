@@ -1,0 +1,27 @@
+<%= form_with(model: director, local: true, html: { class: "form-class" }) do |form| %>
+  <div class="field">
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-txt' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nationality, class: 'form-label' %>
+    <%= form.text_field :nationality, class: 'form-txt' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birth_date, class: 'form-label' %>
+    <%= form.text_field :birth_date, class: 'form-txt' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :favorite_genre_id, "Favorite category:", style: "display: block", class: 'form-label'  %>
+    <%= form.select :favorite_genre_id,  
+        @movie_genres.map { |genre| [genre.name, genre.id] }
+        %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

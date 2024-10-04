@@ -1,6 +1,6 @@
 <div class="main-genre">
     <div class="link-create-genre">
-        <button class="create-movie">Create new movie genre</button>
+      <%= link_to "Create new movie genre",  new_movie_genre_path, class:"create-movie" %>
         <% if flash[:notice] %>
           <div class="notice-flash">
             <%= flash[:notice] %>
