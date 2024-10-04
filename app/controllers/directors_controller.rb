@@ -23,6 +23,11 @@ class DirectorsController < ApplicationController
     @director = Director.includes(:favorite_genre).find(params[:id])
   end
 
+  def edit
+    @director = Director.find(params[:id])
+    @movie_genres = MovieGenre.all
+  end
+
   private
 
   def director_params
