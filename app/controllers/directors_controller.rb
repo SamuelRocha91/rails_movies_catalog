@@ -1,4 +1,6 @@
 class DirectorsController < ApplicationController
+  before_action :validate_birth_date, only: [:create, :update]
+
   def index
     @directors = Director.all
   end
@@ -42,6 +44,17 @@ class DirectorsController < ApplicationController
 
   def director_params
     params.require(:director).permit(:name, :nationality, :birth_date, :favorite_genre_id)
+  end
+
+  def validate_birth_date
+    birth_date = params[:director][:birth_date]
+    p birth_date
+    regex = /^\d{4}\/\d{2}\/\d{2}$/
+    match_data = birth_date.match(regex)
+    if !match_data
+       flash[:alert] = "Date format is invalid. Please use yyyy/mm/dd."
+       redirect_back(fallback_location: root_path)
+    end
   end
 
 end
