@@ -1,40 +1,54 @@
-# <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWNyzRvZuphTsoQwk0FKqdTWHQEG50IIDgA&s" alt="Rails Projects Logo" width="52" height="40" /> 🎬 Cine Memory - Site de de Gerenciamento de Filmes<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWNyzRvZuphTsoQwk0FKqdTWHQEG50IIDgA&s" alt="Rails Projects Logo" width="52" height="40" /> 
+# <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWNyzRvZuphTsoQwk0FKqdTWHQEG50IIDgA&s" alt="Rails Projects Logo" width="40" height="30" /> 🎬 Cine Memory - Site de de Gerenciamento de Filmes<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWNyzRvZuphTsoQwk0FKqdTWHQEG50IIDgA&s" alt="Rails Projects Logo" width="40" height="30" /> 
 
 
 
 ## 🌐 [![Português](https://img.shields.io/badge/Português-green)](https://github.com/SamuelRocha91/rails_movies_catalog/blob/main/README.md) [![Español](https://img.shields.io/badge/Español-yellow)](https://github.com/SamuelRocha91/rails_movies_catalog/blob/main/README_es.md) [![English](https://img.shields.io/badge/English-blue)](https://github.com/SamuelRocha91/rails_movies_catalog/blob/main/README_en.md) [![Русский](https://img.shields.io/badge/Русский-lightgrey)](https://github.com/SamuelRocha91/rails_movies_catalog/blob/main/README_ru.md) [![中文](https://img.shields.io/badge/中文-red)](https://github.com/SamuelRocha91/rails_movies_catalog/blob/main/README_ch.md) [![العربية](https://img.shields.io/badge/العربية-orange)](https://github.com/SamuelRocha91/rails_movies_catalog/blob/main/README_ar.md)
 
-
-![Demonstração de uso](./public/movies.gif)
+![Demonstração de uso](./public/movieNew.gif)
 
 ![Em Desenvolvimento](https://img.shields.io/badge/status-Em%20Desenvolvimento-yellow)
 
-## Status do Projeto
+<details>
 
-⚠️ **Em desenvolvimento**: Este é um projeto em estágio de desenvolvimento. Mais funcionalidades ainda estão em processo de implementação. 
+<summary> <h2>Visão Geral</h2> </summary>
 
-## Visão Geral
+Este projeto é um **Sistema de Gerenciamento de Filmes** desenvolvido com Ruby on Rails. Ele permite que os usuários gerenciem filmes, gêneros e diretores. Aplica um CRUD (Criar, Ler, Atualizar, Deletar) de entidades e permite upload de imagens de banners dos filmes.
 
-Este projeto é um **Sistema de Gerenciamento de Filmes** desenvolvido com Ruby on Rails. Ele permite que os usuários gerenciem filmes, gêneros e diretores. APlica um CRUD (Criar, Ler, Atualizar, Deletar) de entidades e upload de imagens de banners dos filmes.
+</details>
 
-## Estrutura do banco de dados
+<details>
+
+<summary> <h2>Estrutura do banco de dados<h2> </summary>
 
 ![Diagrama](./public/diagrama-movies.png)
 
+</details>
 
-## Gems Utilizadas
+<details>
+
+<summary> <h2>Gems Utilizadas</h2> </summary>
+
 - Bullet (Detecção de N+1 Queries)
 Durante o desenvolvimento, a gem Bullet é usada para detectar e alertar sobre ineficiências no carregamento de consultas SQL, como o problema de N+1 queries.
+
 - Kaminari (Paginação)
 A gem Kaminari é utilizada para a paginação de registros em listagens, tornando a navegação em grandes conjuntos de dados mais eficiente. 
+
 - Active Storage (Gerenciamento de Arquivos)
 A aplicação também utiliza o Active Storage para fazer upload e gerenciamento de arquivos, como banners de filmes.
 
-## Setup do Projeto
+</details>
 
-### Com Docker
+<details>
+
+<summary> <h2> Setup do Projeto </h2> </summary>
+
+  <details>
+
+<summary> <h2> Com Docker </h2> </summary>
 
 Para executar este projeto utilizando Docker, siga os passos abaixo:
+
 
 #### Pré-requisitos
 
@@ -68,8 +82,10 @@ Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
 ```
    http://0.0.0.0:3000/
    ```
+  </details>
+  <details>
 
-### Sem Docker
+<summary>  <h2> Sem Docker </h2> </summary>
 
 1. Clone o repositório:
    ```bash
@@ -97,12 +113,16 @@ Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
    ```bash
    rails server
    ```
+   </details>
 
-## Funcionalidades (Planejadas)
+</details>
+
+<details>
+
+<summary> <h2> Funcionalidades (Planejadas) </h2> </summary>
 
 - **Gerenciamento de filmes**: 
-  - Status de rascunho (Indica se o filme está em rascunho ou publicado);
-  - Filtrar por data, caso esteja lançado ou não;
-  - Gerar validação de campo de data e outros;
   - Tetes unitários
   - Responsividade
+
+</details>

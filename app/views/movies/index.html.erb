@@ -4,8 +4,13 @@
           <%= form.label :category, "Category:", class: "category-text" %>
           <%= form.select :category_id,  
             @movie_genres.map { |genre| [genre.name, genre.id] },
-            prompt:  @selected_genre || "All"
+            prompt:  "All"
             %>
+        </div>
+        <div>
+          <%= form.select :release_status, 
+              [['Released', 'released'], ['Upcoming', 'upcoming']], 
+              prompt: 'Select Release Status' %>
         </div>
         <div class="search-name">
          <%= form.text_field :movie_name, class: "filter-movie", 

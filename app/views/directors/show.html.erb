@@ -1,28 +1,51 @@
-<div class="card-movie-detail">
-        <% if flash[:notice] %>
-          <div class="notice-flash">
-            <%= flash[:notice] %>
-          </div>
-        <% end %>
-    <div class="card-movie-single">
-            <div class="card-body-details">
+<div class="card-movie-detail-director">
+        <div>
+            <% if flash[:notice] %>
+              <div class="notice-flash">
+                <%= flash[:notice] %>
+              </div>
+            <% end %>
+        </div>
+    <div class="card-movie-single-director">
+            <div class="card-body-details-director">
                 <h2><%= @director.name %></h2>
-                <p>
-                    <strong>
-                        Nationality:
-                    </strong><%= @director.nationality %></p>
-                <p>
-                    <strong>
-                        Bith_date:
-                    </strong> <%= @director.birth_date %></p>
-                <p>
-                    <strong>
-                        Favorite category:
-                     </strong> <%= @director.favorite_genre.name %></p>
-                <div class="link-detail-edit">
+                <div class="director-content">
+                    <p>
+                        <strong>
+                            Nationality:
+                        </strong><%= @director.nationality %></p>
+                    <p>
+                        <strong>
+                            Bith_date:
+                        </strong> <%= @director.birth_date %></p>
+                    <p>
+                        <strong>
+                            Favorite category:
+                         </strong> <%= @director.favorite_genre.name %></p>
+                </div>
+                <div class="link-detail-edit-director">
                     <%= link_to "Edit Director", edit_director_path(@director.id) %>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="cards-movies">
+    <% @director.movies.each do |movie| %>
+        <div class="card-movie">
+            <% if movie.banner.attached? %>
+              <%= image_tag movie.banner.variant(resize_to_limit: [500, 500]),
+                  alt: movie.title, 
+                  class: "movie-banner" 
+                  %>
+            <% end %>
+            <div class="card-body">
+                <h2><%= movie.title %></h2>
+                <p>Release year: <%= movie.year_of_release %></p>
+                <%= link_to "See Details", movie_path(movie.id)%>
+            </div>
+        </div>
+    <% end %>
+   </div>
+
+ 
