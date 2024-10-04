@@ -1,16 +1,26 @@
 class MoviesController < ApplicationController
   def index
     page = params[:page] || 1
+    year = Time.now.year
     @movie_genres = MovieGenre.all
     @movies = Movie.where(is_draft: false).includes(banner_attachment: :blob) 
-    @movies = @movies
-      .where(
+  
+    @movies = @movies.where(
         movie_genre_id: params[:category_id]
       ) if params[:category_id].present?
-    @movies = @movies
-      .where(
+
+    @movies = @movies.where(
         'title LIKE ?', "%#{params[:movie_name]}%"
       )  if params[:movie_name].present?
+
+    if params[:release_status].present?
+      if params[:release_status] == "released"
+         @movies = @movies.where('year_of_release <= ?', year)
+      else
+         @movies = @movies.where('year_of_release > ?', year)
+      end
+    end
+  
     @movies = @movies.page(page).per(10)  
   end
 
