@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: app_development
+    networks:
+      - app-network
+
+
+  delivery_back:
+    build:
+      context: .
+    volumes:
+      - ./:/app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+  
+
+volumes:
+  postgres_data:
+    
+
+networks:
+  app-network:
+    driver: bridge
