@@ -1,0 +1,29 @@
+<div class="paginate-btns" id="draft-btn">
+  <div class="link-create-container">
+    <%= link_to "Create new draft movie", new_movie_path,  class: "create-movie" %>
+ </div>
+</div>
+
+<div class="cards-movies">
+    <% if @movies.length > 0 %>
+        <% @movies.each do |movie| %>
+            <div class="card-movie">
+                <% if movie.banner.attached? %>
+                <%= image_tag movie.banner.variant(resize_to_limit: [500, 500]),
+                    alt: movie.title, 
+                    class: "movie-banner" 
+                    %>
+                <% end %>
+                <div class="card-body">
+                    <h2><%= movie.title %></h2>
+                    <p>Release year: <%= movie.year_of_release %></p>
+                    <%= link_to "See Details", movie_path(movie.id)%>
+                </div>
+            </div>
+        <% end %>
+    <% else %>
+      <div class="no-drafts">
+          <h2>No drafts registered</h2>
+      </div>
+    <% end %>
+</div>
