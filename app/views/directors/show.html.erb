@@ -7,19 +7,21 @@
     <div class="card-movie-single-director">
             <div class="card-body-details-director">
                 <h2><%= @director.name %></h2>
-                <p>
-                    <strong>
-                        Nationality:
-                    </strong><%= @director.nationality %></p>
-                <p>
-                    <strong>
-                        Bith_date:
-                    </strong> <%= @director.birth_date %></p>
-                <p>
-                    <strong>
-                        Favorite category:
-                     </strong> <%= @director.favorite_genre.name %></p>
-                <div class="link-detail-edit">
+                <div class="director-content">
+                    <p>
+                        <strong>
+                            Nationality:
+                        </strong><%= @director.nationality %></p>
+                    <p>
+                        <strong>
+                            Bith_date:
+                        </strong> <%= @director.birth_date %></p>
+                    <p>
+                        <strong>
+                            Favorite category:
+                         </strong> <%= @director.favorite_genre.name %></p>
+                </div>
+                <div class="link-detail-edit-director">
                     <%= link_to "Edit Director", edit_director_path(@director.id) %>
                 </div>
             </div>
