@@ -66,6 +66,10 @@ class MoviesController < ApplicationController
     end
   end
 
+  def drafts 
+    @movies = Movie.where(is_draft: true).includes(banner_attachment: :blob)   
+  end
+
   private
 
   def movie_params
