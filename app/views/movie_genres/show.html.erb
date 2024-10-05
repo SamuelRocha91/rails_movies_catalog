@@ -11,13 +11,13 @@
         <% end %>
         <h2><%= @movie_genre.name %></h2>
         <div>
-            <%= link_to "Edit this genre name", edit_movie_genre_path(@movie_genre.id)%>
+            <%= link_to "Edit this genre name", edit_movie_genre_path(@movie_genre.id), class: "edit-a-genre" %>
         </div>
     </div>
 
     <div class="cards-movies">
-    <% @movie_genre.movies.each do |movie| %>
-        <%= render partial: 'shared/movie_summary_card', locals: { item: movie } %>
-    <% end %>
+      <% @movie_genre.movies.each do |movie| %>
+          <%= render partial: 'shared/movie_summary_card', locals: { item: movie } %>
+      <% end %>
     </div>
 </div>
