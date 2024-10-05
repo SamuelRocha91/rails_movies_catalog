@@ -125,7 +125,7 @@ movies.each do |movie_data|
   movie.banner.attach(io: image_file, filename: File.basename(image_file))
 end
 
-puts "Filmes e imagens adicionados com sucesso!"
+puts "Primeira leva de Filmes e imagens"
 
 movies_two = [{ title: "Como Se Fosse a Primeira Vez", year_of_release: 2004, duration: 99, synopsis: "A man must make a woman fall in love with him every day...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: comedy_genre, image_path: Rails.root.join("public", "images", "comosefosseaprimeiravez.jpg") },
   { title: "À Espera de um Milagre", year_of_release: 1999, duration: 189, synopsis: "A prison guard discovers a miracle...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "aesperademilagre.jpg") },
@@ -133,21 +133,7 @@ movies_two = [{ title: "Como Se Fosse a Primeira Vez", year_of_release: 2004, du
   { title: "Divertidamente", year_of_release: 2015, duration: 95, synopsis: "An animated story about emotions...", country_of_origin: "USA", is_draft: false, director: anderson, movie_genre: animation_genre, image_path: Rails.root.join("public", "images", "DIvertidamente.jpg")  },
   { title: "Harry Potter e a Pedra Filosofal", year_of_release: 2001, duration: 152, synopsis: "A young wizard's journey begins...", country_of_origin: "UK", is_draft: false, director: spielberg, movie_genre: fantasy_genre, image_path:  Rails.root.join("public", "images", "harrypotter.jpg")  },  
   { title: "Lagoa Azul", year_of_release: 1980, duration: 104, synopsis: "Two children grow up on a deserted island...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "lagoaazul.jpg") },
-  { title: "Lei e Ordem", year_of_release: 2000, duration: 45, synopsis: "Crime drama show...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "leieordem.jpg") },
-  { title: "Matrix", year_of_release: 1999, duration: 136, synopsis: "A hacker discovers the reality he lives in is fake...", country_of_origin: "USA", is_draft: false, director: nolan, movie_genre: sci_fi_genre, image_path: Rails.root.join("public", "images", "matrix.jpg")  },
-  { title: "O Menino do Pijama Listrado", year_of_release: 2008, duration: 94, synopsis: "A young boy befriends a boy in a concentration camp...", country_of_origin: "UK", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "meninodopijama.jpg") },
-  { title: "Não Fale o Mal", year_of_release: 2022, duration: 97, synopsis: "A horror thriller...", country_of_origin: "USA", is_draft: false, director: hitchcock, movie_genre: horror_genre, image_path: Rails.root.join("public", "images", "nãoFaleOMal.jpg")},
-  { title: "Naruto", year_of_release: 2002, duration: 23, synopsis: "An anime about a young ninja's journey...", country_of_origin: "Japan", is_draft: false, director: spielberg, movie_genre: action_genre, image_path: Rails.root.join("public", "images", "Naruto.jpg") },
-  { title: "Os Fantasmas se Divertem", year_of_release: 1988, duration: 92, synopsis: "A comedy about the afterlife...", country_of_origin: "USA", is_draft: false, director: anderson, movie_genre: comedy_genre, image_path: Rails.root.join("public", "images", "osFantasmasSeDivertem.jpg")},
-  { title: "A Paixão de Cristo", year_of_release: 2004, duration: 127, synopsis: "A portrayal of Jesus's crucifixion...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "paixaodecristo.jpg") },
-  { title: "Patrulha Canina", year_of_release: 2013, duration: 12, synopsis: "An animated kids' show about rescue dogs...", country_of_origin: "Canada", is_draft: false, director: spielberg, movie_genre: animation_genre, image_path: Rails.root.join("public", "images", "patrulhacanina.jpg") },
-  { title: "Planeta dos Macacos", year_of_release: 1968, duration: 112, synopsis: "Humans vs apes in a dystopian future...", country_of_origin: "USA", is_draft: false, director: nolan, movie_genre: sci_fi_genre, image_path: Rails.root.join("public", "images", "planetaDosMacacos.jpg") },
-  { title: "Pinguim", year_of_release: 2020, duration: 130, synopsis: "A documentary about penguins...", country_of_origin: "Antarctica", is_draft: false, director: spielberg, movie_genre: documentary_genre, image_path: Rails.root.join("public", "images", "pinguim.jpg") },
-  { title: "Um Príncipe em Nova York", year_of_release: 1988, duration: 117, synopsis: "A prince visits New York City...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: comedy_genre, image_path: Rails.root.join("public", "images", "principeemnovayork.jpg") },
-  { title: "O Senhor dos Anéis", year_of_release: 2001, duration: 178, synopsis: "A quest to destroy a powerful ring...", country_of_origin: "New Zealand", is_draft: false, director: spielberg, movie_genre: fantasy_genre, image_path: Rails.root.join("public", "images", "senhordosaneis.jpg") },
-  { title: "O Show de Truman", year_of_release: 1998, duration: 103, synopsis: "A man realizes his life is a TV show...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "showdetruman.jpg") },
-  { title: "Titanic", year_of_release: 1997, duration: 195, synopsis: "A love story on the ill-fated Titanic...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "titanic.jpg") }
-]
+  { title: "Lei e Ordem", year_of_release: 2000, duration: 45, synopsis: "Crime drama show...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "leieordem.jpg") }]
 
 movies_two.each do |movie_data|
   movie = Movie.create!(
@@ -164,3 +150,38 @@ movies_two.each do |movie_data|
   image_file = File.open(movie_data[:image_path])
   movie.banner.attach(io: image_file, filename: File.basename(image_file))
 end
+puts "Segunda leva de Filmes e imagens"
+
+movies_three = [
+  { title: "Matrix", year_of_release: 1999, duration: 136, synopsis: "A hacker discovers the reality he lives in is fake...", country_of_origin: "USA", is_draft: false, director: nolan, movie_genre: sci_fi_genre, image_path: Rails.root.join("public", "images", "matrix.jpg")  },
+  { title: "O Menino do Pijama Listrado", year_of_release: 2008, duration: 94, synopsis: "A young boy befriends a boy in a concentration camp...", country_of_origin: "UK", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "meninodopijama.jpg") },
+  { title: "Não Fale o Mal", year_of_release: 2022, duration: 97, synopsis: "A horror thriller...", country_of_origin: "USA", is_draft: false, director: hitchcock, movie_genre: horror_genre, image_path: Rails.root.join("public", "images", "nãoFaleOMal.jpg")},
+  { title: "Naruto", year_of_release: 2002, duration: 23, synopsis: "An anime about a young ninja's journey...", country_of_origin: "Japan", is_draft: false, director: spielberg, movie_genre: action_genre, image_path: Rails.root.join("public", "images", "Naruto.jpg") },
+  { title: "Os Fantasmas se Divertem", year_of_release: 1988, duration: 92, synopsis: "A comedy about the afterlife...", country_of_origin: "USA", is_draft: false, director: anderson, movie_genre: comedy_genre, image_path: Rails.root.join("public", "images", "osFantasmasSeDivertem.jpg")},
+  { title: "A Paixão de Cristo", year_of_release: 2004, duration: 127, synopsis: "A portrayal of Jesus's crucifixion...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "paixaodecristo.jpg") },
+  { title: "Patrulha Canina", year_of_release: 2013, duration: 12, synopsis: "An animated kids' show about rescue dogs...", country_of_origin: "Canada", is_draft: false, director: spielberg, movie_genre: animation_genre, image_path: Rails.root.join("public", "images", "patrulhacanina.jpg") },
+  { title: "Planeta dos Macacos", year_of_release: 1968, duration: 112, synopsis: "Humans vs apes in a dystopian future...", country_of_origin: "USA", is_draft: false, director: nolan, movie_genre: sci_fi_genre, image_path: Rails.root.join("public", "images", "planetaDosMacacos.jpg") },
+  { title: "Pinguim", year_of_release: 2020, duration: 130, synopsis: "A documentary about penguins...", country_of_origin: "Antarctica", is_draft: false, director: spielberg, movie_genre: documentary_genre, image_path: Rails.root.join("public", "images", "pinguim.jpg") },
+  { title: "Um Príncipe em Nova York", year_of_release: 1988, duration: 117, synopsis: "A prince visits New York City...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: comedy_genre, image_path: Rails.root.join("public", "images", "principeemnovayork.jpg") },
+  { title: "O Senhor dos Anéis", year_of_release: 2001, duration: 178, synopsis: "A quest to destroy a powerful ring...", country_of_origin: "New Zealand", is_draft: false, director: spielberg, movie_genre: fantasy_genre, image_path: Rails.root.join("public", "images", "senhordosaneis.jpg") },
+  { title: "O Show de Truman", year_of_release: 1998, duration: 103, synopsis: "A man realizes his life is a TV show...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "showdetruman.jpg") },
+  { title: "Titanic", year_of_release: 1997, duration: 195, synopsis: "A love story on the ill-fated Titanic...", country_of_origin: "USA", is_draft: false, director: spielberg, movie_genre: drama_genre, image_path: Rails.root.join("public", "images", "titanic.jpg") }
+]
+
+movies_three.each do |movie_data|
+  movie = Movie.create!(
+    title: movie_data[:title],
+    year_of_release: movie_data[:year_of_release],
+    duration: movie_data[:duration],
+    synopsis: movie_data[:synopsis],
+    country_of_origin: movie_data[:country_of_origin],
+    is_draft: movie_data[:is_draft],
+    director: movie_data[:director],
+    movie_genre: movie_data[:movie_genre]
+  )
+
+  image_file = File.open(movie_data[:image_path])
+  movie.banner.attach(io: image_file, filename: File.basename(image_file))
+end
+
+puts "Terceira leva de Filmes e imagens"

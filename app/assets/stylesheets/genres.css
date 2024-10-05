@@ -13,37 +13,11 @@
     box-shadow: 4px 6px 8px gray;
 }
 
-.container-circles {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-}
-
- .container-circles > :nth-child(odd) {
-    background-color: rgb(6, 168, 223); 
-}
-
-.container-circles > :nth-child(even) {
-    background-color: rgb(116, 116, 158); 
-}
-
-.circles-genres {
-    width: 300px;
-    height: 300px;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .head-genre {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
     border-bottom: 1px solid gray;
     box-shadow: 4px 6px 8px gray;
@@ -53,4 +27,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.edit-a-genre {
+    display: inline-block;
+	color: black;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	background: hsl(187 75% 64%);
+	border-radius: 0.6rem;
+	font-weight: 700;
+	border: 0.35rem solid;
 }

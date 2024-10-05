@@ -24,6 +24,11 @@ services:
       - postgres
     networks:
       - app-network
+    command: >
+      sh -c "
+        bundle exec rails db:create db:migrate db:seed && 
+        bundle exec rails s -b '0.0.0.0'
+      "
 
   
 
