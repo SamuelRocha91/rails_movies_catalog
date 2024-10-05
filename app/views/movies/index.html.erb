@@ -37,19 +37,8 @@
   </div>
 </div>
 <div class="cards-movies">
-    <% @movies.each do |movie| %>
-        <div class="card-movie">
-            <% if movie.banner.attached? %>
-              <%= image_tag movie.banner.variant(resize_to_limit: [500, 500]),
-                  alt: movie.title, 
-                  class: "movie-banner" 
-                  %>
-            <% end %>
-            <div class="card-body">
-                <h2><%= movie.title %></h2>
-                <p>Release year: <%= movie.year_of_release %></p>
-                <%= link_to "See Details", movie_path(movie.id)%>
-            </div>
-        </div>
+
+   <% @movies.each do |movie| %>
+     <%= render partial: 'shared/movie_summary_card', locals: { item: movie } %>
     <% end %>
 </div>
