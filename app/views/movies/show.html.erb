@@ -4,14 +4,14 @@
             <%= flash[:notice] %>
           </div>
         <% end %>
-    <div class="card-movie-single">
+    <div class="cta-large">
             <% if @movie.banner.attached? %>
               <%= image_tag @movie.banner.variant(resize_to_limit: [400, 400]),
                   alt: @movie.title, 
                   class: "movie-banner-detail" 
                   %>
             <% end %>
-            <div class="card-body-details">
+            <div class="cta__text-column">
                 <h2><%= @movie.title %></h2>
                 <p>
                     <strong>
@@ -41,7 +41,8 @@
                     <strong>
                     Director:
                     </strong> <%= @movie.director.name %></p>
-                <div class="link-detail-edit">
+
+                <div class="movie-cta-btn">
                     <%= link_to "Edit movie", edit_movie_path(@movie.id) %>
                     <%= button_to 'Delete movie', movie_path(@movie.id), method: :delete, data: { turbo_confirm: 'Are you sure you want to delete this movie?' } %>
                 </div>
