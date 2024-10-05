@@ -100,13 +100,14 @@
 }
 
 .create-movie {
-    padding: 15px;
-    background-color: rgb(253, 253, 255);
-    border-radius: 10px;
-    font-weight: 600;
-    border: 3px solid rgb(15, 51, 1);
-    text-decoration: none;
-    font-size: 20px;
+    display: inline-block;
+	color: black;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	background: hsl(123, 75%, 64%);
+	border-radius: 0.6rem;
+	font-weight: 700;
+	border: 0.35rem solid;
 }
 
 .create-movie:hover {
