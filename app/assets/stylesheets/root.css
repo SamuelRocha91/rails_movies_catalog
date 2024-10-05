@@ -49,6 +49,7 @@
     gap: 10px;
     padding: 20px;
     width: 100vw;
+    box-sizing: border-box;
  }
 
  .card-movie {

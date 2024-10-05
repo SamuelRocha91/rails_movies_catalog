@@ -58,9 +58,11 @@ body {
  }
 
  main {
+    box-sizing: border-box;
     margin-top: 10vh;
     display: flex;
     flex-direction: column;
+    width: 100vw;
  }
 
  .notice-flash {
