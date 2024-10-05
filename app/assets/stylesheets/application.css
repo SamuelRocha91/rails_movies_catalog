@@ -29,7 +29,8 @@ body {
     height: 10vh;
     position: fixed;
     top: 0;
-	background: hsl(69, 75%, 64%);
+	 background: hsl(69, 75%, 64%);
+    border-bottom: 0.35rem solid;
  }
 
  .header-links {

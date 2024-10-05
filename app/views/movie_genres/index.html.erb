@@ -7,14 +7,17 @@
           </div>
         <% end %>
     </div>
-    <div class="container-circles">
-        <% if @movie_genres %>
-          <% @movie_genres.map do |genre| %>
-            <div class="circles-genres">
-                <h2><%= genre.name %></h2>
-                <%= link_to "See more", movie_genre_path(genre.id) %>
+    <div class="container-directors">
+      <% if @movie_genres %>
+        <% @movie_genres.map do |genre| %>
+          <div class="cta">
+            <div class="cta__text-column" >
+              <h2><%= genre.name %></h2>
+              <%= link_to "See more", movie_genre_path(genre.id) %>
             </div>
-          <% end %>
+          </div>
         <% end %>
+      <% end %>
     </div>
 </div>
+
