@@ -19,6 +19,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+   font-family: "Open Sans", sans-serif;
 }
 
  header {
@@ -28,7 +29,7 @@ body {
     height: 10vh;
     position: fixed;
     top: 0;
-    background-color: rgb(255, 255, 104);
+	background: hsl(69, 75%, 64%);
  }
 
  .header-links {
@@ -41,7 +42,8 @@ body {
 
  .header-links a{ 
     text-decoration: none;
-    color: blue;
+    color: rgb(1, 1, 12);
+    font-weight: 700;
  }
 
  .image-logo {
@@ -81,7 +83,8 @@ body {
 
  .draft-link a{ 
     text-decoration: none;
-    color: blue;
+    color: rgb(0, 0, 15);
+    font-weight: 700;
  }
 
  .no-drafts {

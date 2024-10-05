@@ -21,11 +21,14 @@
  }
 
 .search-btn {
-    background-color: green;
-    border-radius: 5px;
-    padding: 6px;
-    font-size: 20px;
-    color: white;
+    display: inline-block;
+	color: black;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	background: hsl(64, 75%, 64%);
+	border-radius: 0.6rem;
+	font-weight: 700;
+	border: 0.35rem solid;
  }
 
  .search-btn:hover {
