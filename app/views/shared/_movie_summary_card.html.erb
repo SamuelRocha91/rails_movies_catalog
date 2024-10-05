@@ -1,0 +1,13 @@
+<article class="cta">
+	 <% if item.banner.attached? %>
+        <%= image_tag item.banner.variant(resize_to_limit: [500, 500]),
+          alt: item.title, 
+          class: "movie-banner" 
+            %>
+            <% end %>
+	<div class="cta__text-column">
+		<h2><%= item.title %></h2>
+        <p>Release year: <%= item.year_of_release %></p>
+		<%= link_to "See Details", movie_path(item.id)%>
+	</div>
+</article>
