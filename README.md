@@ -1,4 +1,4 @@
-# <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWNyzRvZuphTsoQwk0FKqdTWHQEG50IIDgA&s" alt="Rails Projects Logo" width="40" height="30" /> 🎬 Cine Memory - Site de de Gerenciamento de Filmes<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWNyzRvZuphTsoQwk0FKqdTWHQEG50IIDgA&s" alt="Rails Projects Logo" width="40" height="30" /> 
+# <img src="https://cdn-icons-png.flaticon.com/128/82/82667.png" alt="Rails Projects Logo" width="40" height="30" /> 🎬 Cine Memory - Site de de Gerenciamento de Filmes<img src="https://cdn-icons-png.flaticon.com/128/82/82667.png" alt="Rails Projects Logo" width="40" height="30" /> 
 
 
 
@@ -126,3 +126,11 @@ Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
   - Responsividade
 
 </details>
+
+<details>
+  <summary><h2>🔗 Outros Repositórios</h2></summary>
+
+  - ⚡ [Odin Projects](https://github.com/SamuelRocha91/ruby_exercises)
+
+</details>
+
